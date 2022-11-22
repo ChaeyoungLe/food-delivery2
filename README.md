@@ -55,7 +55,7 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
     1. 배달상태가 바뀔때마다 카톡 등으로 알림을 줄 수 있어야 한다  Event driven
     
     
-##1.Saga(pub/sub)
+## 1.Saga(pub/sub)
 1. 기능추가 : 쿠폰이 발행될 시 카카오 알림
 ![image](https://user-images.githubusercontent.com/45279406/203252598-35adbae1-46eb-44a4-bda8-dbcccf59968a.png)
 

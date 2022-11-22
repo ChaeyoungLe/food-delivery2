@@ -70,4 +70,41 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 ![image](https://user-images.githubusercontent.com/45279406/203259273-d00186d2-587a-4490-9ae3-d399b9f9bb56.png)
 
 
+##
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: app
+          uri: http://app:8080
+          predicates:
+            - Path=/payments/**, /orders/**, /menus/**
+        - id: store
+          uri: http://store:8080
+          predicates:
+            - Path=/orders/**, /topMenus/**
+        - id: kakao
+          uri: http://kakao:8080
+          predicates:
+            - Path=/notificationLogs/**, /orderStates/**
+        - id: delivery
+          uri: http://delivery:8080
+          predicates:
+            - Path=/deliveItems/**, /checkItems/**
+        - id: frontend
+          uri: http://frontend:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
 

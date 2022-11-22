@@ -70,8 +70,8 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 ![image](https://user-images.githubusercontent.com/45279406/203259273-d00186d2-587a-4490-9ae3-d399b9f9bb56.png)
 
 
-##
-
+## gateway
+```
 spring:
   profiles: docker
   cloud:
@@ -107,4 +107,4 @@ spring:
             allowedHeaders:
               - "*"
             allowCredentials: true
-
+```

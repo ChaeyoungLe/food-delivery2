@@ -73,6 +73,7 @@
                     { text: "orderId", value: "orderId" },
                     { text: "address", value: "address" },
                     { text: "status", value: "status" },
+                    { text: "count", value: "count" },
                 ],
             order : [],
             newValue: {},
@@ -96,6 +97,7 @@
                 'orderId': '',
                 'address': '',
                 'status': '',
+                'count': '',
             }
         },
         methods: {

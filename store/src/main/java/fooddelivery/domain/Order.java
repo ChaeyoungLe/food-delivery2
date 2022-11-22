@@ -1,5 +1,6 @@
 package fooddelivery.domain;
 
+import fooddelivery.domain.CouponPublished;
 import fooddelivery.domain.Accepted;
 import fooddelivery.domain.Cooked;
 import fooddelivery.domain.Rejected;
@@ -60,9 +61,20 @@ public class Order  {
     
     
     private String status;
+    
+    
+    
+    
+    
+    private String count;
 
     @PostPersist
     public void onPostPersist(){
+
+
+        CouponPublished couponPublished = new CouponPublished(this);
+        couponPublished.publishAfterCommit();
+
     }
     @PrePersist
     public void onPrePersist(){

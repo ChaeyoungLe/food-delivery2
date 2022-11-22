@@ -148,6 +148,27 @@ public class NotificationLog  {
 
         
     }
+    public static void alertMessage(CouponPublished couponPublished){
+
+        /** Example 1:  new item 
+        NotificationLog notificationLog = new NotificationLog();
+        repository().save(notificationLog);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(couponPublished.get???()).ifPresent(notificationLog->{
+            
+            notificationLog // do something
+            repository().save(notificationLog);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

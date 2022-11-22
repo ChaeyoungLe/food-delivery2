@@ -2,10 +2,16 @@
 
     <v-card outlined>
         <v-card-title>
-            OrderList # {{$route.params.id }}
+            TopMenu # {{$route.params.id }}
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <String label="FoodId" v-model="item.foodId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="FoodNm" v-model="item.foodNm" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
     </v-card>
 
@@ -15,7 +21,7 @@
   const axios = require('axios').default;
 
   export default {
-    name: 'OrderListViewDetail',
+    name: 'TopMenuViewDetail',
     props: {
       value: Object,
     },
@@ -24,7 +30,7 @@
     }),
     async created() {
       var params = this.$route.params;
-      var temp = await axios.get(axios.fixUrl('/orderLists/' + params.id))
+      var temp = await axios.get(axios.fixUrl('/topMenus/' + params.id))
 
       this.item = temp.data;
 

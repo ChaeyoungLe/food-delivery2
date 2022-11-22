@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class OrderListViewHandler {
+public class TopMenuViewHandler {
 
 
     @Autowired
-    private OrderListRepository orderListRepository;
+    private TopMenuRepository topMenuRepository;
 
 
 

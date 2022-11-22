@@ -33,6 +33,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        DeliveItem.updateDeliverlyList(event);
+        
 
         
 

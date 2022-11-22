@@ -91,6 +91,48 @@ public class Order  {
 
 
 
+    public static void updateOrderList(Rejected rejected){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(rejected.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateOrderList(Paid paid){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(paid.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

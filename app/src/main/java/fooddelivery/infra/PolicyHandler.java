@@ -34,6 +34,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        Order.updateState(event);
+        
 
         
 
@@ -48,6 +50,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        Order.updateState(event);
+        
 
         
 
@@ -62,6 +66,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        Order.updateState(event);
+        
 
         
 
@@ -76,6 +82,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        Order.updateState(event);
+        
 
         
 
@@ -90,6 +98,8 @@ public class PolicyHandler{
         
 
         // Sample Logic //
+        Order.updateState(event);
+        
 
         
 

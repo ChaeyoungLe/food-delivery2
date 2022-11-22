@@ -11,24 +11,6 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 
 ![image](https://user-images.githubusercontent.com/45279406/203244496-55c57b1f-e1cc-4730-bb87-ec04a297b5b8.png)
 
-# Table of contents
-
-- [예제 - 음식배달](#---)
-  - [서비스 시나리오](#서비스-시나리오)
-  - [체크포인트](#체크포인트)
-  - [분석/설계](#분석설계)
-  - [구현:](#구현-)
-    - [DDD 의 적용](#ddd-의-적용)
-    - [폴리글랏 퍼시스턴스](#폴리글랏-퍼시스턴스)
-    - [폴리글랏 프로그래밍](#폴리글랏-프로그래밍)
-    - [동기식 호출 과 Fallback 처리](#동기식-호출-과-Fallback-처리)
-    - [비동기식 호출 과 Eventual Consistency](#비동기식-호출-과-Eventual-Consistency)
-  - [운영](#운영)
-    - [CI/CD 설정](#cicd설정)
-    - [동기식 호출 / 서킷 브레이킹 / 장애격리](#동기식-호출-서킷-브레이킹-장애격리)
-    - [오토스케일 아웃](#오토스케일-아웃)
-    - [무정지 재배포](#무정지-재배포)
-  - [신규 개발 조직의 추가](#신규-개발-조직의-추가)
 
 # 서비스 시나리오
 
@@ -39,6 +21,10 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 1. 고객이 결제한다
 1. 주문이 되면 주문 내역이 입점상점주인에게 전달된다
 1. 상점주인이 확인하여 요리해서 배달 출발한다
+1. 상점주인은 주문을 거절 할 수 있다.
+1. 상점주인은 주문 수락 후 요리 시작과 요리 마침을 시스템 상태에 입력한다.
+1. 상점주인이 확인하여 요리해서 배달 출발한다
+1. 상점주인은 쿠폰을 발행할 수 있다.
 1. 고객이 주문을 취소할 수 있다
 1. 주문이 취소되면 배달이 취소된다
 1. 고객이 주문상태를 중간중간 조회한다
@@ -55,14 +41,30 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
     1. 배달상태가 바뀔때마다 카톡 등으로 알림을 줄 수 있어야 한다  Event driven
     
     
-## 1.Saga(pub/sub)
-1. 기능추가 : 쿠폰이 발행될 시 카카오 알림
+## 1.추가 기능
+1. 쿠폰이 발행될 시 카카오 알림
 ![image](https://user-images.githubusercontent.com/45279406/203252598-35adbae1-46eb-44a4-bda8-dbcccf59968a.png)
 
 ![image](https://user-images.githubusercontent.com/45279406/203252997-18b08840-4fb0-47bd-9ae6-89429edbc023.png)
 
+2. 상점주인은 주문을 거절 할 수 있으며 고객에게 알림이 간다.
+![image](https://user-images.githubusercontent.com/45279406/203254764-da8a51fc-774e-4c24-b0d6-e0eb286a3eaa.png)
+
+![image](https://user-images.githubusercontent.com/45279406/203254785-e1bb4f12-cad6-47ff-b961-e1da137dfcb0.png)
+
+![image](https://user-images.githubusercontent.com/45279406/203254883-64b3fae2-59e7-4e14-a8c4-9434f9652b36.png)
 
 
+
+3. 상점주인이 요리를 시작하거나 완료시 고객에게 알림이 간다.
+4. 
+![image](https://user-images.githubusercontent.com/45279406/203255172-8324a596-ef5b-4fde-af4e-adbd8a2dd2ff.png)
+
+![image](https://user-images.githubusercontent.com/45279406/203254964-03d0026a-98bd-4a57-aa1a-e8ea22c38434.png)
+
+
+
+ 
 
 ## Before Running Services
 ### Make sure there is a Kafka server running

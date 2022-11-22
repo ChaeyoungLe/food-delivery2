@@ -74,6 +74,7 @@
                 'orderId': '',
                 'address': '',
                 'status': '',
+                'count': '',
             }
         },
         methods:{

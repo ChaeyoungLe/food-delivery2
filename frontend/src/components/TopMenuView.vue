@@ -2,7 +2,7 @@
 
     <v-data-table
         :headers="headers"
-        :items="orderList"
+        :items="topMenu"
         :items-per-page="5"
         class="elevation-1"
     ></v-data-table>
@@ -13,7 +13,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'OrderListView',
+        name: 'TopMenuView',
         props: {
             value: Object,
             editMode: Boolean,
@@ -22,15 +22,17 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
+                { text: "foodId", value: "foodId" },
+                { text: "foodNm", value: "foodNm" },
             ],
-            orderList : [],
+            topMenu : [],
         }),
           async created() {
-            var temp = await axios.get(axios.fixUrl('/orderLists'))
+            var temp = await axios.get(axios.fixUrl('/topMenus'))
 
-            temp.data._embedded.orderLists.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
+            temp.data._embedded.topMenus.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
 
-            this.orderList = temp.data._embedded.orderLists;
+            this.topMenu = temp.data._embedded.topMenus;
         },
         methods: {
         }

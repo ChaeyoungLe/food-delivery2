@@ -61,6 +61,27 @@ public class DeliveItem  {
 
 
 
+    public static void updateDeliverlyList(Cooked cooked){
+
+        /** Example 1:  new item 
+        DeliveItem deliveItem = new DeliveItem();
+        repository().save(deliveItem);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(cooked.get???()).ifPresent(deliveItem->{
+            
+            deliveItem // do something
+            repository().save(deliveItem);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

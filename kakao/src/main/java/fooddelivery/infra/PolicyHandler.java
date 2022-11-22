@@ -103,6 +103,22 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CouponPublished'")
+    public void wheneverCouponPublished_AlertMessage(@Payload CouponPublished couponPublished){
+
+        CouponPublished event = couponPublished;
+        System.out.println("\n\n##### listener AlertMessage : " + couponPublished + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        NotificationLog.alertMessage(event);
+        
+
+        
+
+    }
 
 }
 

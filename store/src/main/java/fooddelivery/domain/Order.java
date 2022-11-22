@@ -1,5 +1,6 @@
 package fooddelivery.domain;
 
+import fooddelivery.domain.CouponPublished;
 import fooddelivery.domain.Accepted;
 import fooddelivery.domain.Cooked;
 import fooddelivery.domain.Rejected;
@@ -60,9 +61,20 @@ public class Order  {
     
     
     private String status;
+    
+    
+    
+    
+    
+    private String count;
 
     @PostPersist
     public void onPostPersist(){
+
+
+        CouponPublished couponPublished = new CouponPublished(this);
+        couponPublished.publishAfterCommit();
+
     }
     @PrePersist
     public void onPrePersist(){
@@ -91,6 +103,48 @@ public class Order  {
 
 
 
+    public static void updateOrderList(Rejected rejected){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(rejected.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateOrderList(Paid paid){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(paid.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

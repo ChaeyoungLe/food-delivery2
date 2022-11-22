@@ -50,7 +50,7 @@ pluralCaseList.push( {plural: "orders", pascal: "Order"} )
 pluralCaseList.push( {plural: "menus", pascal: "Menu"} )
 pluralCaseList.push( {plural: "orders", pascal: "Order"} )
 
-pluralCaseList.push( {plural: "orderLists", pascal: "OrderList"} )
+pluralCaseList.push( {plural: "topMenus", pascal: "TopMenu"} )
 pluralCaseList.push( {plural: "notificationLogs", pascal: "NotificationLog"} )
 
 pluralCaseList.push( {plural: "orderStates", pascal: "OrderState"} )

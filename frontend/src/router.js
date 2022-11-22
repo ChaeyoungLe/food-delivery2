@@ -15,8 +15,8 @@ import MenuViewDetail from "./components/MenuViewDetail"
 import OrderManager from "./components/listers/OrderCards"
 import OrderDetail from "./components/listers/OrderDetail"
 
-import OrderListView from "./components/OrderListView"
-import OrderListViewDetail from "./components/OrderListViewDetail"
+import TopMenuView from "./components/TopMenuView"
+import TopMenuViewDetail from "./components/TopMenuViewDetail"
 import NotificationLogManager from "./components/listers/NotificationLogCards"
 import NotificationLogDetail from "./components/listers/NotificationLogDetail"
 
@@ -75,14 +75,14 @@ export default new Router({
             },
 
             {
-                path: '/orderLists',
-                name: 'OrderListView',
-                component: OrderListView
+                path: '/topMenus',
+                name: 'TopMenuView',
+                component: TopMenuView
             },
             {
-                path: '/orderLists/:id',
-                name: 'OrderListViewDetail',
-                component: OrderListViewDetail
+                path: '/topMenus/:id',
+                name: 'TopMenuViewDetail',
+                component: TopMenuViewDetail
             },
             {
                 path: '/notificationLogs',

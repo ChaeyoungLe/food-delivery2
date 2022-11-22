@@ -67,7 +67,7 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 ## cors
 ![image](https://user-images.githubusercontent.com/45279406/203258906-bc8fd96d-5bf1-4a4a-afbd-edb5ff26d979.png)
 
-![image](https://user-images.githubusercontent.com/45279406/203258881-ba04b134-3fc2-4221-9786-7b89c1993a3d.png)
+![image](https://user-images.githubusercontent.com/45279406/203259273-d00186d2-587a-4490-9ae3-d399b9f9bb56.png)
 
 
 

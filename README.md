@@ -43,12 +43,12 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
     
 ## 1.추가 기능
 1. 쿠폰이 발행될 시 카카오 알림
+
 ![image](https://user-images.githubusercontent.com/45279406/203252598-35adbae1-46eb-44a4-bda8-dbcccf59968a.png)
 
 ![image](https://user-images.githubusercontent.com/45279406/203252997-18b08840-4fb0-47bd-9ae6-89429edbc023.png)
 
-2. 상점주인은 주문을 거절 할 수 있으며 고객에게 알림이 간다.
-![image](https://user-images.githubusercontent.com/45279406/203254764-da8a51fc-774e-4c24-b0d6-e0eb286a3eaa.png)
+2. 상점주인은 주문을 거절 할 수 있으며 고객에게 알림이 간다
 
 ![image](https://user-images.githubusercontent.com/45279406/203254785-e1bb4f12-cad6-47ff-b961-e1da137dfcb0.png)
 
@@ -57,7 +57,7 @@ www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25b
 
 
 3. 상점주인이 요리를 시작하거나 완료시 고객에게 알림이 간다.
-4. 
+
 ![image](https://user-images.githubusercontent.com/45279406/203255172-8324a596-ef5b-4fde-af4e-adbd8a2dd2ff.png)
 
 ![image](https://user-images.githubusercontent.com/45279406/203254964-03d0026a-98bd-4a57-aa1a-e8ea22c38434.png)

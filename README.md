@@ -9,6 +9,8 @@
 ## Model
 www.msaez.io/#/storming/WYA32zfMDRQhJxkToRJuDE9i5zp2/d5226685a623b8b323accd0c25bb7041
 
+![image](https://user-images.githubusercontent.com/45279406/203244496-55c57b1f-e1cc-4730-bb87-ec04a297b5b8.png)
+
 ## Before Running Services
 ### Make sure there is a Kafka server running
 ```
